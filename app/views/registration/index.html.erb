@@ -1,0 +1,41 @@
+<h1>Register Here</h1>
+<%= render 'form' %>
+
+</br>
+</br>
+</br>
+
+<h> Listing Posts </h>
+
+</br>
+</br>
+
+<table id ='t1'>
+	<tr>
+		<th>Name</th>
+		<th>Post</th>
+		<th></th>
+		<th></th>
+	</tr>
+
+
+<% @posts.each do |p| %>
+
+	<tr>
+		<td><%= p.commenter %></td>
+		<td><%= p.body %></td>
+		<td><%= p.id %></td>
+		<td>
+		<button type="button" class="btnclk" data-key = <%="#{p.id}"%> > Delete </button>
+		</td>	
+		 
+
+	</tr>
+<% end %>
+
+</table>
+
+<button id="b1" type="button"> Click </button>
+
+
+
